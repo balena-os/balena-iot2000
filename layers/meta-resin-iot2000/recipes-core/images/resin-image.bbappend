@@ -11,3 +11,5 @@ RESIN_BOOT_PARTITION_FILES = " \
     grub.cfg:/EFI/BOOT/ \
     bzImage${KERNEL_INITRAMFS}-${MACHINE}.bin:/vmlinuz \
     "
+
+IMAGE_INSTALL_append = " switchmode"
