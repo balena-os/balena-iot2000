@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Change architecture type to i386-nlp in the .coffee file in order to match the supervisor architecture type [Florin]
 * Update the resin-yocto-scripts submodule to d209b8c9c797ebd52a0f5ce404ea2420c248724c (on master branch) [Florin]
 
 # v2.9.6+rev1
