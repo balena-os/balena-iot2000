@@ -17,7 +17,6 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-intel \
     ${TOPDIR}/../layers/meta-resin-iot2000 \
     ${TOPDIR}/../layers/meta-iot2000/meta-iot2000-bsp \
-    ${TOPDIR}/../layers/oe-meta-go \
     ${TOPDIR}/../layers/meta-rust \
     "
 
