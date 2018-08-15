@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the resin-yocto-scripts submodule to 8312741e13604a9d166370349061876afb22c0fa (on master branch) [Florin]
 * Switch to Yocto Rocko 18.0.1 [Florin]
 
 # v2.13.6+rev1
