@@ -20,7 +20,7 @@ module.exports =
 		machine: 'iot2000'
 		image: 'resin-image'
 		fstype: 'resinos-img'
-		version: 'yocto-morty'
+		version: 'yocto-rocko'
 		deployArtifact: 'resin-image-iot2000.resinos-img'
 		compressed: true
 

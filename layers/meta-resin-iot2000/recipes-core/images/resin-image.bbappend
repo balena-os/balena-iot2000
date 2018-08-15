@@ -7,7 +7,7 @@ NOHDD = "1"
 # Customize resinos-img
 RESIN_IMAGE_BOOTLOADER = "grub-efi"
 RESIN_BOOT_PARTITION_FILES = " \
-    bootia32.efi:/EFI/BOOT/ \
+    grub-efi-bootia32.efi:/EFI/BOOT/bootia32.efi \
     grub.cfg:/EFI/BOOT/ \
     bzImage${KERNEL_INITRAMFS}-${MACHINE}.bin:/vmlinuz \
     "

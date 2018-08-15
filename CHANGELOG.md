@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Switch to Yocto Rocko 18.0.1 [Florin]
+
 # v2.13.6+rev1
 ## (2018-07-13)
 
