@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.14.3+rev1
+## (2018-08-15)
+
+* Update the meta-resin submodule to version v2.14.3 [Florin]
 * Rework patches for Intel Quark on go version 1.9 [Florin]
 * Update the resin-yocto-scripts submodule to 8312741e13604a9d166370349061876afb22c0fa (on master branch) [Florin]
 * Switch to Yocto Rocko 18.0.1 [Florin]
