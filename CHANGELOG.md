@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.13.6+rev2
+## (2018-09-18)
+
+* Add a parsable representation of the changelog [Giovanni Garufi]
+* Add versionist support [Giovanni Garufi]
+
 # v2.13.6+rev1
 ## (2018-07-13)
 
