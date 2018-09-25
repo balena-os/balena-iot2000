@@ -1,0 +1,62 @@
+- version: v2.13.6+rev1
+  date: 2018-07-12T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.13.6 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        59ccd8558435ff6424827fb36ccb43b14650f4d4 (on master branch) [Florin]
+- version: v2.12.7+rev1
+  date: 2018-05-03T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.7 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        f7718efbbf53369aaacb7eb54e707ee8a5d4fc4b (on master branch) [Florin]
+- version: v2.12.5+rev2
+  date: 2018-03-26T22:00:00.000Z
+  commits:
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        9cecb1ca4d9d4713dd337148b7d04a17afdba772 (on master branch) [Florin]
+- version: v2.12.5+rev1
+  date: 2018-03-26T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.5 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        51b8849e2a02d0d4e729bff24909d9746e0bf4c3 (on master branch) [Florin]
+- version: v2.12.3+rev1
+  date: 2018-03-15T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.3 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        dc9dfe466e48d934e55fb20a05156886873b1ab1 (on master branch) [Florin]
+- version: v2.9.7+rev1
+  date: 2018-02-05T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.9.7 [Florin]'
+    - subject: >-
+        Add the iwlwifi kernel module in the rootfs for supporting various Intel
+        based WiFi adapters [Florin]
+    - subject: >-
+        Change architecture type to i386-nlp in the .coffee file in order to
+        match the supervisor architecture type [Florin]
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        d209b8c9c797ebd52a0f5ce404ea2420c248724c (on master branch) [Florin]
+- version: v2.9.6+rev1
+  date: 2018-01-13T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.9.6 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        6f7a9ab326bb822196e3e48b08ef1d73d08caec6 (on master branch) [Florin]
+- version: v2.7.8+rev1
+  date: 2017-11-18T00:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.7.8 [Florin]'
+- version: v2.7.6+rev1
+  date: 2017-10-19T00:00:00.000Z
+  commits:
+    - subject: 'Initial release for Siemens IOT2000 [Theodor]'
