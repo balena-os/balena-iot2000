@@ -1,6 +1,228 @@
 Change log
 -----------
 
+# v2.44.0+rev1
+## (2019-10-18)
+
+
+<details>
+<summary> Update meta-balena from v2.31.0 to v2.44.0 [Vicentiu Galanopulo] </summary>
+
+> ## meta-balena-2.44.0
+> ### (2019-10-03)
+> 
+> * Make uboot dev images autoboot delay build time configurable. Default is no delay [Zubair Lutfullah Kakakhel]
+> * Reduce systemd logging level from info to notice [Zubair Lutfullah Kakakhel]
+> * resin-supervisor: Expose container ID via env variable [Roman Mazur]
+> * kernel-devsrc: Copy vdso.lds.S file in source archive if available [Sebastian Panceac]
+> * Disable PasswordAuthentication in sshd in production images as an extra precautionary measure. [Zubair Lutfullah Kakakhel]
+> * Update balena-engine to 18.9.10 [Robert Günzler]
+> * hostapp-update-hooks: Filter out automount for inactive sysroot [Alexandru Costache]
+> * Add support for hooks 2.0 enabling finer granularity during HostOS updates. [Zubair Lutfullah Kakakhel]
+> * Update balena-supervisor to v10.3.7 [Cameron Diver]
+> * Add support for balena cloud SSH public keys [Andrei Gherzan]
+> * Map any user to root using libnss-ato [Andrei Gherzan]
+> * Add option to disable kernel headers from being built. [Zubair Lutfullah Kakakhel]
+
+> ## meta-balena-2.43.0
+> ### (2019-09-13)
+> 
+> * Update NetworkManager to 1.20.2 [Andrei Gherzan]
+> * Update ModemManager to 1.10.6 [Andrei Gherzan]
+
+> ## meta-balena-2.42.0
+> ### (2019-09-13)
+> 
+> * A small fix in initramfs when /dev/console is invalid due to whatever reason [Zubair Lutfullah Kakakhel]
+> * Add automated testing for external kernel module header tarballs [Zubair Lutfullah Kakakhel]
+> * Make sure correct utsrelease.h is packaged [Zubair Lutfullah Kakakhel]
+> * Fix a bug where application containers with new systemd versions were failing to start in cases. Switch to systemd cgroup driver in balenaEngine [Zubair Lutfullah Kakakhel]
+
+> ## meta-balena-2.41.1
+> ### (2019-09-03)
+> 
+> * Update ModemManager to version 1.10.4 [Florin Sarbu]
+> * Fix for some innocous systemd tmpfile warnings /var/run -> /run ones [Zubair Lutfullah Kakakhel]
+> * Fix for rollbacks where the inactive partition mount was unavailable when altboot triggered [Zubair Lutfullah Kakakhel]
+> * kernel-resin: Enable FTDI USB-serial convertors driver [Sebastian Panceac]
+
+> ## meta-balena-2.41.0
+> ### (2019-08-22)
+> 
+> * Fix a hang in initramfs for warrior production images [Zubair Lutfullah Kakakhel]
+> * Update balena-engine to 18.09.8 [Robert Günzler]
+> * Avoid overlayfs mounts in poky's volatile-binds [Andrei Gherzan]
+
+> ## meta-balena-2.40.0
+> ### (2019-08-14)
+> 
+> * Update balena-supervisor to v10.2.2 [Cameron Diver]
+> * Workaround for a cornercase bug in PersistentLogging where journalctl filled the state partition. Vacuum the journal on boot. [Zubair Lutfullah Kakakhel]
+
+> ## meta-balena-2.39.0
+> ### (2019-07-31)
+> 
+> * usb-modeswitch-data: Switch Huawei E3372 12d1:1f01 to mbim mode [Alexandru Costache]
+> * Fix rollback altboots to prevent good reboots by supervisor triggering rollback. [Zubair Lutfullah Kakakhel]
+> * Devices using u-boot. Remove any BOOTDELAY for production images. Add a 2 seconds delay for development images [Zubair Lutfullah Kakakhel]
+> * Devices using u-boot. Enable CONFIG_CMD_SETEXPR for all devices. Required for rollbacks to work [Zubair Lutfullah Kakakhel]
+> * Devices using u-boot. Enable rollback-altboot by handling bootcount via meta-balena. [Zubair Lutfullah Kakakhel]
+> * Production Devices using u-boot. Enable CONFIG_RESET_TO_RETRY to reset a device in case it drops into a u-boot shell [Zubair Lutfullah Kakakhel]
+> * Remove confusing networkmanager https connectivity warning [Zubair Lutfullah Kakakhel]
+> * Increase fs.inotify.max_user_instances to 512 [Zubair Lutfullah Kakakhel]
+> * Update balena-supervisor to v10.0.3 [Cameron Diver]
+> * Fix balena hello-world healthcheck [Zubair Lutfullah Kakakhel]
+> * Add nf_table kernel modules [Zubair Lutfullah Kakakhel]
+> * hostapp-update-hooks: Use correct source for inactive sysroot [Alexandru Costache]
+> * Add extra healthcheck to balena service. It will spin up a hello-world container as well [Zubair Lutfullah Kakakhel]
+> * Update balena-supervisor to v9.18.8 [Cameron Diver]
+> * image-resin.bbclass: fixed a typo [Kyle Harding]
+> * kernel-resin: Add support for CH340 family of usb-serial adapters [Sebastian Panceac]
+> * resin-proxy-config: add missing reserved ip ranges to default noproxy [Will Boyce]
+> * Reduce data partition size from 1G to 192M [Zubair Lutfullah Kakakhel]
+
+> ## meta-balena-2.38.3
+> ### (2019-07-10)
+> 
+> * resin-proxy-config: fix up incorrect bash subshell command [Matthew McGinn]
+
+> ## meta-balena-2.38.2
+> ### (2019-06-27)
+> 
+> * Update to kernel-modules-headers v0.0.20 to fix missing target modpost binary on kernel 5.0.3 [Florin Sarbu]
+> * Update to kernel-modules-headers v0.0.19 to fix target objtool compile issue on kernel 5.0.3 [Florin Sarbu]
+
+> ## meta-balena-2.38.1
+> ### (2019-06-20)
+> 
+> * Add warrior to compatible layers for meta-balena-common [Florin Sarbu]
+> * Fix image-resin.bbclass to be able to use deprecated layers [Andrei Gherzan]
+> * Fix kernel-devsrc on thud when kernel version < 4.10 [Andrei Gherzan]
+
+> ## meta-balena-2.38.0
+> ### (2019-06-14)
+> 
+> * Fix VERSION_ID os-release to be semver complient [Andrei Gherzan]
+> * Introduce META_BALENA_VERSION in os-release [Andrei Gherzan]
+> * Fix a case where changes to u-boot were not regenerating the config file at build time and using stale values. [Zubair Lutfullah Kakakhel]
+> * Use all.rp_filter=2 as the default value in balenaOS [Andrei Gherzan]
+> * Persist bluetooth storage data over reboots [Andrei Gherzan]
+> * Drop support for morty and krogoth Yocto versions [Andrei Gherzan]
+> * Add Yocto Warrior support [Zubair Lutfullah Kakakhel]
+> * Set both VERSION_ID and VERSION in os-release to host OS version [Andrei Gherzan]
+> * Bump balena-engine to 18.9.6 [Zubair Lutfullah Kakakhel]
+> * Downgrade balena-supervisor to v9.15.7 [Andrei Gherzan]
+> * Switch from dropbear to openSSH [Andrei Gherzan]
+> * Rename meta-resin-common to meta-balena-common [Andrei Gherzan]
+> * Add wifi firmware for rtl8192su [Zubair Lutfullah Kakakhel]
+
+> ## meta-balena-2.37.0
+> ### (2019-05-29)
+> 
+> * Update balena-supervisor to v9.15.8 [Cameron Diver]
+> * kernel-modules-headers: Update to v0.0.18 [Andrei Gherzan]
+> * os-config: Update to v1.1.1 to fix mDNS [Andrei Gherzan]
+> * Fix busybox nslookup mdns lookups [Andrei Gherzan]
+> * Update balena-supervisor to v9.15.4 [Cameron Diver]
+> * Improve logging and version comparison in linux-firmware cleanup class [Andrei Gherzan]
+> * Sync ModemManager recipe with upstream [Andrei Gherzan]
+> * Update NetworkManager to 1.18.0 [Andrei Gherzan]
+
+> ## meta-balena-2.36.0
+> ### (2019-05-20)
+> 
+> * Cleanup old versions of iwlwifi firmware files in Yocto Thud [Florin Sarbu]
+
+> ## meta-balena-2.35.0
+> ### (2019-05-18)
+> 
+> * Update kernel-module-headers to version v0.0.16 [Florin Sarbu]
+> * Add uboot support for unified kernel cmdline arguments [Andrei Gherzan]
+> * Switch flasher detection in initramfs to flasher boot parameter [Andrei Gherzan]
+> * Update balena-supervisor to v9.15.0 [Cameron Diver]
+> * Improve boot speed by only mounting the inactive partition when needed [Zubair Lutfullah Kakakhel]
+> * Fix openssl dependency of balena-unique-key [Andrei Gherzan]
+> * Do not spawn getty in production images [Florin Sarbu]
+
+> ## meta-balena-2.34.1
+> ### (2019-05-14)
+> 
+> * Update balena-supervisor to v9.14.10 [Cameron Diver]
+
+> ## meta-balena-2.34.0
+> ### (2019-05-10)
+> 
+> * Add support to update a connectivity section in NetworkManager via config.json [Zubair Lutfullah Kakakhel]
+> * systemd: Fix journald configuration file [Andrei Gherzan]
+> * Add --max-download-attempts=10 to balenaEngine service to improve performance on shaky networks [Zubair Lutfullah Kakakhel]
+> * Update balena-engine to 18.09.5 [Zubair Lutfullah Kakakhel]
+> * Log initramfs messages to kernel dmesg to capture fsck, partition expand etc. command output [Zubair Lutfullah Kakakhel]
+> * kernel-resin: Add FAT fs specific configs to RESIN_CONFIGS [Sebastian Panceac]
+> * Update balena-supervisor to v9.14.9 [Cameron Diver]
+> * Introduce meta-balena yocto thud support [Andrei Gherzan]
+> * Update os-config to 1.1.0 [Andrei Gherzan]
+
+> ## meta-balena-2.33.0
+> ### (2019-05-02)
+> 
+> * Fixes for sysroot symlinks creation [Andrei Gherzan]
+> * libmbim: Refresh patches after last update to avoid build warnings [Andrei Gherzan]
+> * modemmanager: Refresh patches after last update to avoid build warnings [Andrei Gherzan]
+> * Make security flags inclusion yocto version specific [Andrei Gherzan]
+> * systemd: Make directory warning patch yocto version specific [Andrei Gherzan]
+> * Replace wireless tools by iw [Andrei Gherzan]
+> * systemd: Use a conf.d file for journald configuration [Andrei Gherzan]
+> * Set go verison to 1.10.8 to match balena-engine requirements [Andrei Gherzan]
+> * Update balena-engine to 18.09.3 [Andrei Gherzan]
+> * Update balena-supervisor to v9.14.6 [Cameron Diver]
+> * resin-u-boot: make devtool-compatible [Sven Schwermer]
+> * docker-disk: Disable unnecessary docker pid check [Armin Schlegel]
+> * Update libmbim to version 1.18.0 [Zahari Petkov]
+> * Update libqmi to version 1.22.2 [Zahari Petkov]
+> * Update to ModemManager v1.10.0 [Zahari Petkov]
+> * Add a OS_KERNEL_CMDLINE parameter that allows BSPs to easily add extra kernel cmdline args to production images [Zubair Lutfullah Kakakhel]
+
+> ## meta-balena-2.32.0
+> ### (2019-04-08)
+> 
+> * balena-supervisor: Update to v9.14.0 [Cameron Diver]
+> * readme: Replace resin with balena where appropriate [Roman Mazur]
+> * Add systemd-analyze to production images as well [Zubair Lutfullah Kakakhel]
+> * Enable dbus interface for dnsmasq [Zubair Lutfullah Kakakhel]
+> * Disable docker bridge while pulling the supervisor container to remove runtime balena-engine warnings [Zubair Lutfullah Kakakhel]
+> * Fix typo in os-networkmanager that prevented it from working [Zubair Lutfullah Kakakhel]
+> * Fix bug where fsck was run on the data partition on every boot even if it wasn't needed due to old system time. [Zubair Lutfullah Kakakhel]
+> * Fix the balena version string reported by balena-engine info [Zubair Lutfullah Kakakhel]
+> * Only check mmc devices for flasher image presence by default. [Zubair Lutfullah Kakakhel]
+> * Remove an extra redundant copy of udev rules database [Zubair Lutfullah Kakakhel]
+> * Un-upx mobynit and os-config to speed them up a bit. Approx 1 second boost to boot time. [Zubair Lutfullah Kakakhel]
+
+> ## meta-balena-2.31.5
+> ### (2019-03-21)
+> 
+> * Update resin-supervisor to v9.11.3 [Andrei Gherzan]
+
+> ## meta-balena-2.31.4
+> ### (2019-03-20)
+> 
+> * resin-supervisor: Recreate on start if config has changed [Rich Bayliss]
+
+> ## meta-balena-2.31.3
+> ### (2019-03-20)
+> 
+> * Update resin-supervisor to v9.11.2 [Pablo Carranza Velez]
+
+> ## meta-balena-2.31.2
+> ### (2019-03-19)
+> 
+> * Update resin-supervisor to v9.11.1 [Pablo Carranza Velez]
+
+> ## meta-balena-2.31.1
+> ### (2019-03-18)
+> 
+> * Update resin-supervisor to v9.11.0 [Pablo Carranza Velez]
+</details>
+
 # v2.31.0+rev4
 ## (2019-10-02)
 
