@@ -1,4 +1,17 @@
 - commits:
+    - subject: Discontinue the iot2000 board
+      hash: 924f800a3ece4db8a6b4a028557d4bc8219ae2e4
+      body: |
+        We will no longer be offering OS updates for this board
+      footer:
+        Changelog-entry: Discontinue the iot2000 board
+        changelog-entry: Discontinue the iot2000 board
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.31.0+rev6
+  date: 2020-03-26T14:22:04.920Z
+- commits:
     - subject: Update meta-rust to include 1.36
       hash: 2de522ead34f7313e1953bafd218870db09f100c
       body: ''

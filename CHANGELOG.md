@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.31.0+rev6
+## (2020-03-26)
+
+* Discontinue the iot2000 board [Florin Sarbu]
+
 # v2.31.0+rev5
 ## (2020-02-13)
 
