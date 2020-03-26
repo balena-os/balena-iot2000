@@ -7,7 +7,7 @@ module.exports =
 	aliases: [ 'iot2000' ]
 	name: 'Siemens IOT2000'
 	arch: 'i386-nlp'
-	state: 'experimental'
+	state: 'discontinued'
 
 	instructions: commonImg.instructions
 
